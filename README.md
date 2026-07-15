@@ -31,6 +31,6 @@ The Freshwater Fishing Suitability tool is implemented as an ArcGIS Pro geoproce
 - **Output Coordinate System:** Defaults to **NAD 1983 StatePlane North Carolina FIPS 3200 (Feet)** and can be changed to match the coordinate system of other GIS projects.
 - **Fish Consumption Safety:** Disabled by default and can be enabled to incorporate mercury and PCB advisories into the suitability scoring process.
 
-
+![ArcGIS Pro Tool Interface](images/tool-interface.png)
 
 *Figure 1. ArcGIS Pro geoprocessing interface for the Freshwater Fishing Suitability tool.*
