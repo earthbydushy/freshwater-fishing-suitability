@@ -1,2 +1,36 @@
-# freshwater-fishing-suitability
-ArcGIS Pro geoprocessing tool for identifying and ranking freshwater fishing locations using environmental suitability, proximity, and spatial analysis.
+# Freshwater Fishing Suitability
+
+ArcGIS Pro geoprocessing tool that ranks freshwater fishing locations by water quality, proximity, and fish consumption safety,
+
+## Overview
+
+Public fishing access locations are easy to find, but knowing whether a fishing spot is actually suitable or safe to consume fish from is much more challenging. Doing so requires combining water quality assessments, proximity analysis, and, when desired, fish consumption advisories into a single decision-making workflow.
+
+This ArcGIS Pro geoprocessing tool automates that process. Given a user-specified ZIP code, it identifies nearby public fishing access locations and ranks them using a rule-based suitability scoring system based on water quality and proximity. Users can optionally incorporate fish consumption safety criteria, such as mercury and PCB advisories, to identify locations that are not only accessible but also safer for recreational fishing.
+
+This repository demonstrates the workflow using publicly available datasets from North Carolina. However, the tool is designed to be reusable and can be adapted for other states or regions by substituting equivalent public fishing access, water quality, and ZIP code datasets.
+
+## Key Features
+
+- Interactive ArcGIS Pro geoprocessing tool with a user-friendly interface
+- Accepts a user-specified ZIP code to identify nearby public fishing locations
+- Integrates public fishing access locations with EPA water quality assessments
+- Uses a rule-based suitability scoring system to rank fishing locations
+- Optional fish consumption safety analysis incorporating mercury and PCB advisories
+- Filters to the 10 nearest fishing locations by distance, then ranks them by suitability score
+- Generates a ranked feature class for visualization in ArcGIS Pro
+- Produces an HTML report summarizing analysis results
+- Designed to be reusable with equivalent datasets from other states or regions
+
+## Tool Interface
+
+The Freshwater Fishing Suitability tool is implemented as an ArcGIS Pro geoprocessing script tool. The interface provides a concise set of configurable parameters while supplying sensible defaults for the North Carolina demonstration workflow.
+
+- **Input Datasets:** Default paths point to the North Carolina demonstration datasets and can be replaced with equivalent public fishing access, water quality, and ZIP code datasets from other states or regions.
+- **ZIP Code:** Defaults to **27607 (Raleigh, NC)** for demonstration purposes and accepts any valid ZIP code within the study area.
+- **Output Coordinate System:** Defaults to **NAD 1983 StatePlane North Carolina FIPS 3200 (Feet)** and can be changed to match the coordinate system of other GIS projects.
+- **Fish Consumption Safety:** Disabled by default and can be enabled to incorporate mercury and PCB advisories into the suitability scoring process.
+
+
+
+*Figure 1. ArcGIS Pro geoprocessing interface for the Freshwater Fishing Suitability tool.*
