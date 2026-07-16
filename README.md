@@ -90,3 +90,13 @@ Running the Freshwater Fishing Suitability tool generates the following outputs:
 </p>
 
 *Figure 2. Automatically generated HTML report displaying the ranked fishing locations, suitability scores, distances, and map visualization.*
+
+## Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| **Python** | Core programming language used to implement the freshwater fishing suitability workflow. |
+| **ArcPy** | Performs geoprocessing, spatial analysis, data management, and map automation within ArcGIS Pro. |
+| **ArcGIS Pro** | Primary GIS platform used to develop, test, and execute the geoprocessing tool. |
+| **ArcGIS Pro Toolbox (.atbx)** | Provides the graphical user interface for configuring tool parameters and executing the analysis. |
+| **HTML** | Generates the final analysis report containing the ranked fishing locations and map visualization. |
