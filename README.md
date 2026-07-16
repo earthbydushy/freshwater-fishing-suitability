@@ -100,3 +100,13 @@ Running the Freshwater Fishing Suitability tool generates the following outputs:
 | **ArcGIS Pro** | Primary GIS platform used to develop, test, and execute the geoprocessing tool. |
 | **ArcGIS Pro Toolbox (.atbx)** | Provides the graphical user interface for configuring tool parameters and executing the analysis. |
 | **HTML** | Generates the final analysis report containing the ranked fishing locations and map visualization. |
+
+## Data Sources
+
+The demonstration workflow uses publicly available datasets for North Carolina. Because EPA ATTAINS water quality data and U.S. Census TIGER/Line ZIP Code Tabulation Areas (ZCTAs) are available nationwide, the workflow can be adapted to other states by substituting an equivalent public fishing access dataset.
+
+| Dataset | Format | Source |
+|---------|--------|--------|
+| NCWRC Public Fishing Areas | Shapefile (.shp) | NC OneMap / North Carolina Wildlife Resources Commission |
+| EPA ATTAINS Water Quality Assessment | Esri File Geodatabase (.gdb) | U.S. Environmental Protection Agency (EPA) |
+| U.S. Census TIGER/Line ZIP Code Tabulation Areas (ZCTAs) | Shapefile (.shp) | U.S. Census Bureau |
