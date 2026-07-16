@@ -85,6 +85,8 @@ Running the Freshwater Fishing Suitability tool generates the following outputs:
 
 ### HTML Report
 
-![HTML Report](images/html-report.png)
+<p align="center">
+  <img src="images/html-report.png" alt="HTML Report" width="700">
+</p>
 
 *Figure 2. Automatically generated HTML report displaying the ranked fishing locations, suitability scores, distances, and map visualization.*
