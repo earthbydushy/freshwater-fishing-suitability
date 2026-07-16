@@ -34,3 +34,45 @@ The Freshwater Fishing Suitability tool is implemented as an ArcGIS Pro geoproce
 ![ArcGIS Pro Tool Interface](images/tool-interface.png)
 
 *Figure 1. ArcGIS Pro geoprocessing interface for the Freshwater Fishing Suitability tool.*
+
+## Workflow
+
+The Freshwater Fishing Suitability tool follows the workflow below to identify and rank suitable public fishing locations.
+
+```text
+User Input
+      │
+      ▼
+Set up output directories and scratch geodatabase
+      │
+      ▼
+Validate all required input datasets
+      │
+      ▼
+Convert shapefile inputs to geodatabase feature classes to prevent field name truncation
+      │
+      ▼
+Locate the user by calculating the centroid of the selected ZIP code
+      │
+      ▼
+Reproject water quality data to the selected output coordinate system
+      │
+      ▼
+Spatially join each fishing access point to the nearest EPA ATTAINS water quality line feature
+      │
+      ▼
+Calculate suitability scores using water quality attributes
+(optionally incorporating fish consumption safety criteria)
+      │
+      ▼
+Calculate distances from the ZIP code centroid
+      │
+      ▼
+Filter to the 10 nearest fishing locations
+      │
+      ▼
+Rank locations by suitability score
+      │
+      ▼
+Generate output feature classes, map visualization, and HTML report
+```
