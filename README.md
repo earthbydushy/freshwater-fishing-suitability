@@ -110,3 +110,36 @@ The demonstration workflow uses publicly available datasets for North Carolina. 
 | NCWRC Public Fishing Areas | Shapefile (.shp) | NC OneMap / North Carolina Wildlife Resources Commission |
 | EPA ATTAINS Water Quality Assessment | Esri File Geodatabase (.gdb) | U.S. Environmental Protection Agency (EPA) |
 | U.S. Census TIGER/Line ZIP Code Tabulation Areas (ZCTAs) | Shapefile (.shp) | U.S. Census Bureau |
+
+## Installation & Usage
+
+### Prerequisites
+
+- ArcGIS Pro **3.6.1**
+- ArcGIS Pro **Basic** license or higher
+- No ArcGIS extensions required
+- A cloned ArcGIS Pro Conda environment for standalone development and testing
+- Required datasets downloaded from the sources listed in the **Data Sources** section
+
+### Running the Tool in ArcGIS Pro
+
+1. Clone or download this repository.
+2. Download the required datasets and place them in the `data/` folder.
+3. Open the ArcGIS Pro project from `arcgis-project/`.
+4. Open the Freshwater Fishing Suitability tool from `arcgis-toolbox/`.
+5. Confirm or replace the default input datasets.
+6. Enter a valid ZIP code for the study area.
+7. Select the desired output coordinate system.
+8. Optionally enable fish consumption safety analysis.
+9. Click **Run**.
+
+The tool automatically creates the required output directories and generates:
+
+- A feature class containing the ranked top 10 freshwater fishing locations
+- An HTML report containing the map, site rankings, suitability scores, and distances
+
+### Running the Script Directly
+
+The Python script in `code/` can also be executed from an IDE such as PyCharm for development and testing. The script includes default parameter values for standalone execution outside the ArcGIS Pro geoprocessing interface.
+
+> **Note:** Standalone execution depends on the project's relative folder structure. Keep the repository structure unchanged, as the script references the ArcGIS Pro project, toolbox, and `data/` folder using relative paths.
