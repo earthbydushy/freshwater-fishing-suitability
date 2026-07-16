@@ -33,7 +33,7 @@ The Freshwater Fishing Suitability tool is implemented as an ArcGIS Pro geoproce
 
 ![ArcGIS Pro Tool Interface](images/tool-interface.png)
 
-*Figure 1. ArcGIS Pro geoprocessing interface for the Freshwater Fishing Suitability tool.*
+*Figure 1. ArcGIS Pro geoprocessing interface for the Freshwater Fishing Suitability geoprocessing tool.*
 
 ## Workflow
 
@@ -76,3 +76,15 @@ Rank locations by suitability score
       ▼
 Generate output feature classes, map visualization, and HTML report
 ```
+## Project Outputs
+
+Running the Freshwater Fishing Suitability tool generates the following outputs:
+
+- **Top 10 Fishing Locations** – A feature class containing the 10 highest-ranked freshwater fishing locations, including suitability scores, associated water quality attributes, and distance from the selected ZIP code.
+- **HTML Report** – An automatically generated report summarizing the analysis with a map of the ranked fishing locations and a results table containing the site name, suitability score, and distance from the selected ZIP code.
+
+### HTML Report
+
+*Insert screenshot of the generated HTML report.*
+
+*Figure 2. Automatically generated HTML report displaying the ranked fishing locations, suitability scores, distances, and map visualization.*
