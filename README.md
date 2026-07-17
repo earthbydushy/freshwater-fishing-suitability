@@ -142,4 +142,4 @@ The tool automatically creates the required output directories and generates:
 
 The Python script in `code/` can also be executed from an IDE such as PyCharm for development and testing. The script includes default parameter values for standalone execution outside the ArcGIS Pro geoprocessing interface.
 
-> **Note:** Standalone execution depends on the project's relative folder structure. Keep the repository structure unchanged, as the script references the ArcGIS Pro project, toolbox, and `data/` folder using relative paths.
+> **Note:** Standalone execution depends on the project's folder structure. Keep the repository structure unchanged, as the script references the project files and input data using relative paths.
