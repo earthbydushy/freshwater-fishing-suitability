@@ -1,10 +1,13 @@
 # fishingSuitability.py
 #
 # Author: Dushyanthi Rajakumar
-# Unity ID: drajaku
-# Purpose: Identify and rank the top 10 public fresh water fishing locations in North Carolina
-#          based on water quality suitability, distance from a user-provided zip code,
+# Purpose: Identify and rank the top 10 public freshwater fishing locations
+#          based on water quality, proximity to a user-provided ZIP code,
 #          and optional fish consumption safety criteria.
+#
+# Note: The default input datasets included with this project are for
+#       North Carolina. The tool can be adapted to other states by
+#       providing equivalent input datasets
 #
 # Procedure Summary:
 #  * accept all inputs through arcgis pro script tool gui or pycharm defaults.
@@ -24,7 +27,7 @@
 #  * add top 10 results to arcgis pro map with meaningful symbology.
 #  * capture screenshots and generate an html report with results.
 #
-# Usage    : fishing_tool.py
+# Usage    : fishingSuitability.py
 #            all parameters have defaults and are optional.
 #            coordinate_system should be provided as a wkid integer
 #                    e.g. 2264 for NAD 1983 NC State Plane Feet
