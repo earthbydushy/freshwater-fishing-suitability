@@ -115,7 +115,7 @@ The demonstration workflow uses publicly available datasets for North Carolina. 
 
 ### Prerequisites
 
-- ArcGIS Pro **3.6.1**
+- ArcGIS Pro 3.6.1 or later
 - ArcGIS Pro **Basic** license or higher
 - No ArcGIS extensions required
 - A cloned ArcGIS Pro Conda environment for standalone development and testing
@@ -143,3 +143,19 @@ The tool automatically creates the required output directories and generates:
 The Python script in `code/` can also be executed from an IDE such as PyCharm for development and testing. The script includes default parameter values for standalone execution outside the ArcGIS Pro geoprocessing interface.
 
 > **Note:** Standalone execution depends on the project's folder structure. Keep the repository structure unchanged, as the script references the project files and input data using relative paths.
+
+
+## Future Improvements
+
+- Calculate travel distance using the road network instead of straight-line distance.
+- Expand the spatial matching workflow to include polygon water features, such as reservoirs and ponds, in addition to river line features when linking fishing access sites to nearby water quality data.
+
+## Author
+
+**Dushyanthi Rajakumar**
+
+Master of Geospatial Information Science and Technology (MGIST)  
+Center for Geospatial Analytics  
+North Carolina State University
+
+GitHub: https://github.com/earthbydushy
