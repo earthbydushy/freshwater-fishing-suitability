@@ -1,6 +1,6 @@
 # Freshwater Fishing Suitability
 
-ArcGIS Pro geoprocessing tool that ranks freshwater fishing locations by water quality, proximity, and fish consumption safety,
+ArcGIS Pro geoprocessing tool that ranks freshwater fishing locations by water quality, proximity, and fish consumption safety.
 
 ## Overview
 
@@ -24,7 +24,7 @@ This repository demonstrates the workflow using publicly available datasets from
 
 ## Tool Interface
 
-The Freshwater Fishing Suitability tool is implemented as an ArcGIS Pro geoprocessing script tool. The interface provides a concise set of configurable parameters while supplying sensible defaults for the North Carolina demonstration workflow.
+The Freshwater Fishing Suitability tool is implemented as an ArcGIS Pro geoprocessing script tool. The interface provides a concise set of configurable parameters while supplying default parameter values for the North Carolina demonstration workflow.
 
 - **Input Datasets:** Default paths point to the North Carolina demonstration datasets and can be replaced with equivalent public fishing access, water quality, and ZIP code datasets from other states or regions.
 - **ZIP Code:** Defaults to **27607 (Raleigh, NC)** for demonstration purposes and accepts any valid ZIP code within the study area.
@@ -49,7 +49,7 @@ Set up output directories and scratch geodatabase
 Validate all required input datasets
       │
       ▼
-Convert shapefile inputs to geodatabase feature classes to prevent field name truncation
+Convert shapefile inputs to geodatabase feature classes to preserve field names during spatial analysis
       │
       ▼
 Locate the user by calculating the centroid of the selected ZIP code
@@ -80,7 +80,7 @@ Generate output feature classes, map visualization, and HTML report
 
 Running the Freshwater Fishing Suitability tool generates the following outputs:
 
-- **Top 10 Fishing Locations** – A feature class containing the 10 highest-ranked freshwater fishing locations, including suitability scores, associated water quality attributes, and distance from the selected ZIP code.
+- **Top 10 Fishing Locations Feature Class** – A feature class containing the 10 highest-ranked freshwater fishing locations, including suitability scores, associated water quality attributes, and distance from the selected ZIP code.
 - **HTML Report** – An automatically generated report summarizing the analysis with a map of the ranked fishing locations and a results table containing the site name, suitability score, and distance from the selected ZIP code.
 
 ### HTML Report
@@ -125,9 +125,9 @@ The demonstration workflow uses publicly available datasets for North Carolina. 
 
 1. Clone or download this repository.
 2. Download the required datasets and place them in the `data/` folder.
-3. Open the ArcGIS Pro project from `arcgis-project/`.
-4. Open the Freshwater Fishing Suitability tool from `arcgis-toolbox/`.
-5. Confirm or replace the default input datasets.
+3. Open 'fishing_suitability.aprx' in AicGIS Pro.
+4. In the Catalog pane, expand **Toolboxes** → `fishing_suitability.atbx`, then open the **fishingSuitability** script tool.
+5. Review or replace the default input datasets.
 6. Enter a valid ZIP code for the study area.
 7. Select the desired output coordinate system.
 8. Optionally enable fish consumption safety analysis.
@@ -140,7 +140,7 @@ The tool automatically creates the required output directories and generates:
 
 ### Running the Script Directly
 
-The Python script in `code/` can also be executed from an IDE such as PyCharm for development and testing. The script includes default parameter values for standalone execution outside the ArcGIS Pro geoprocessing interface.
+The Python script in code/ can also be executed from an IDE such as PyCharm for standalone development and testing. The script includes default parameter values for standalone execution outside the ArcGIS Pro geoprocessing interface.
 
 > **Note:** Standalone execution depends on the project's folder structure. Keep the repository structure unchanged, as the script references the project files and input data using relative paths.
 
@@ -149,6 +149,10 @@ The Python script in `code/` can also be executed from an IDE such as PyCharm fo
 
 - Calculate travel distance using the road network instead of straight-line distance.
 - Expand the spatial matching workflow to include polygon water features, such as reservoirs and ponds, in addition to river line features when linking fishing access sites to nearby water quality data.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Author
 
