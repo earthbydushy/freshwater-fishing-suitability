@@ -125,7 +125,7 @@ The demonstration workflow uses publicly available datasets for North Carolina. 
 
 1. Clone or download this repository.
 2. Download the required datasets and place them in the `data/` folder.
-3. Open 'fishing_suitability.aprx' in AicGIS Pro.
+3. Open 'fishing_suitability.aprx' in ArcGIS Pro.
 4. In the Catalog pane, expand **Toolboxes** → `fishing_suitability.atbx`, then open the **fishingSuitability** script tool.
 5. Review or replace the default input datasets.
 6. Enter a valid ZIP code for the study area.
